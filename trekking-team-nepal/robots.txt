@@ -1,0 +1,21 @@
+# Trekking Team Nepal - Robots.txt
+# https://trekkingteamnepal.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trekkingteamnepal.com/sitemap.xml
+
+# Disallow sensitive directories
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /admin/
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
+
+# Security headers recommendations for hosting
+# X-Frame-Options: DENY
+# X-Content-Type-Options: nosniff
+# X-XSS-Protection: 1; mode=block

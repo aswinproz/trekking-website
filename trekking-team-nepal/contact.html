@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Trekking Team Nepal for booking inquiries, custom trek planning, and expert advice. Get in touch with our team in Kathmandu.">
+    <meta name="keywords" content="contact Trekking Team Nepal, Nepal trekking inquiry, book trek Nepal, contact form">
+    <meta name="author" content="Trekking Team Nepal">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | Trekking Team Nepal">
+    <meta property="og:description" content="Get in touch with our expert team for trekking inquiries and custom trip planning.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=1200">
+    <meta property="og:url" content="https://trekkingteamnepal.com/contact.html">
+    
+    <link rel="canonical" href="https://trekkingteamnepal.com/contact.html">
+    
+    <title>Contact Us | Trekking Team Nepal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Trekking Team Nepal",
+        "description": "Contact form and office information for Trekking Team Nepal",
+        "url": "https://trekkingteamnepal.com/contact.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Trekking Team Nepal"
+        }
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <span>Trekking Team Nepal</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="treks.html">Treks</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=1920&q=80" alt="Contact Us">
+        </div>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help plan your perfect adventure</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- Contact Info -->
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="icon">📍</div>
+                    <h4>Our Office</h4>
+                    <p>Thamel, Kathmandu<br>Nepal 44600</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="icon">📞</div>
+                    <h4>Phone</h4>
+                    <p>+977-1-4441234<br>+977-9841234567</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="icon">✉️</div>
+                    <h4>Email</h4>
+                    <p>info@trekkingteamnepal.com<br>bookings@trekkingteamnepal.com</p>
+                </div>
+            </div>
+
+            <div class="about-grid" style="margin-top: 4rem;">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 1.5rem;">Send Us a Message</h2>
+                    <form id="contactForm" action="#" method="POST">
+                        <!-- CSRF Token Simulation -->
+                        <input type="hidden" name="csrf_token" value="generated_token_here">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required minlength="2" maxlength="100" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required autocomplete="email">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="NP">Nepal</option>
+                                    <option value="IN">India</option>
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">Interested In *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select Your Interest</option>
+                                <option value="everest">Everest Base Camp Trek</option>
+                                <option value="annapurna-circuit">Annapurna Circuit Trek</option>
+                                <option value="annapurna-base-camp">Annapurna Base Camp Trek</option>
+                                <option value="langtang">Langtang Valley Trek</option>
+                                <option value="manaslu">Manaslu Circuit Trek</option>
+                                <option value="mustang">Upper Mustang Trek</option>
+                                <option value="dolpo">Dolpo Trek</option>
+                                <option value="other-trek">Other Trek</option>
+                                <option value="tour">Tour Package</option>
+                                <option value="custom">Custom Trip</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers</label>
+                                <select id="travelers" name="travelers">
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="3-5">3-5 Persons</option>
+                                    <option value="6-10">6-10 Persons</option>
+                                    <option value="10+">10+ Persons</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferred-month">Preferred Month</label>
+                                <select id="preferred-month" name="preferred-month">
+                                    <option value="">Not Sure</option>
+                                    <option value="jan-feb">Jan - Feb</option>
+                                    <option value="mar-may">Mar - May</option>
+                                    <option value="jun-aug">Jun - Aug</option>
+                                    <option value="sep-nov">Sep - Nov</option>
+                                    <option value="dec">Dec</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Tell us about your travel plans, experience level, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                                <span style="font-weight: normal; color: var(--color-text-secondary);">Subscribe to our newsletter for travel tips and special offers</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Security: Honeypot field for spam protection -->
+                        <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                        
+                        <div class="security-badge" style="justify-content: center;">
+                            🔒 Secure Form · Your information is protected
+                        </div>
+</form>
+                </div>
+                
+                <!-- Sidebar Info -->
+                <div>
+                    <div class="card" style="padding: 2rem; margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;">Why Book With Us?</h3>
+                        <ul style="list-style: none;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-border);">✅ 18+ Years Experience</li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-border);">✅ Expert Local Guides</li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-border);">✅ Flexible Booking</li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-border);">✅ 24/7 Support</li>
+                            <li style="padding: 0.75rem 0;">✅ Best Price Guarantee</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Office Hours</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Sunday - Saturday:</strong> 6:00 AM - 8:00 PM</p>
+                        <p style="margin-bottom: 0;"><span class="text-accent">Emergency Line:</span> +977-9841234567</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 1rem;">We typically respond within 24 hours. For urgent inquiries, please call us directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.224586361906!2d85.3123!3d27.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQzJzAwLjAiTiA4NsKwMTgnNS4zIkU!5e0!3m2!1sen!2snp!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Trekking Team Nepal Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <span>Trekking Team Nepal</span>
+                    </a>
+                    <p>Your trusted partner for unforgettable Himalayan adventures since 2005.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">t</a>
+                        <a href="#" aria-label="Instagram">i</a>
+                        <a href="#" aria-label="YouTube">y</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treks.html">Treks</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Treks</h4>
+                    <ul class="footer-links">
+                        <li><a href="treks.html#everest">Everest Base Camp</a></li>
+                        <li><a href="treks.html#annapurna">Annapurna Circuit</a></li>
+                        <li><a href="treks.html#langtang">Langtang Valley</a></li>
+                        <li><a href="treks.html#manaslu">Manaslu Circuit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li>📍 Thamel, Kathmandu, Nepal</li>
+                        <li>📞 +977-1-4441234</li>
+                        <li>✉️ info@trekkingteamnepal.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Trekking Team Nepal. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
