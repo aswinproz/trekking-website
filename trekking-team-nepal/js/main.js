@@ -111,24 +111,34 @@
     }
 
     // ========================================
-    // Trek Filters
+    // Trek Filters & Sorting
     // ========================================
     function initTrekFilters() {
         const difficultyFilter = document.getElementById('difficulty');
         const durationFilter = document.getElementById('duration');
         const regionFilter = document.getElementById('region');
+        const sortByFilter = document.getElementById('sortBy');
         const searchInput = document.getElementById('trekSearch');
-        const trekCards = document.querySelectorAll('.trek-card');
+        const resultsCount = document.getElementById('resultsCount');
+        const treksGrid = document.getElementById('treksGrid');
 
-        if (trekCards.length === 0) return;
+        if (!treksGrid) return;
 
-        function filterTreks() {
+        const trekLinks = Array.from(treksGrid.querySelectorAll('.trek-card-link'));
+        const initialOrder = [...trekLinks];
+        const totalTreks = trekLinks.length;
+
+        function updateDisplay() {
             const difficulty = difficultyFilter ? difficultyFilter.value : '';
             const duration = durationFilter ? durationFilter.value : '';
             const region = regionFilter ? regionFilter.value : '';
+            const sortBy = sortByFilter ? sortByFilter.value : 'featured';
             const search = searchInput ? searchInput.value.toLowerCase() : '';
 
-            trekCards.forEach(function(card) {
+            // 1. Filter
+            let visibleCount = 0;
+            trekLinks.forEach(function(link) {
+                const card = link.querySelector('.trek-card');
                 const cardDifficulty = card.getAttribute('data-difficulty');
                 const cardDuration = parseInt(card.getAttribute('data-duration'));
                 const cardRegion = card.getAttribute('data-region');
@@ -137,12 +147,7 @@
 
                 let show = true;
 
-                // Difficulty filter
-                if (difficulty && cardDifficulty !== difficulty) {
-                    show = false;
-                }
-
-                // Duration filter
+                if (difficulty && cardDifficulty !== difficulty) show = false;
                 if (duration) {
                     const maxDuration = parseInt(duration);
                     if (duration === '25') {
@@ -151,54 +156,69 @@
                         show = false;
                     }
                 }
+                if (region && cardRegion !== region) show = false;
+                if (search && !title.includes(search) && !description.includes(search)) show = false;
 
-                // Region filter
-                if (region && cardRegion !== region) {
-                    show = false;
-                }
-
-                // Search filter
-                if (search && !title.includes(search) && !description.includes(search)) {
-                    show = false;
-                }
-
-                card.style.display = show ? '' : 'none';
+                link.style.display = show ? '' : 'none';
+                if (show) visibleCount++;
             });
 
-            // Update grid layout
-            updateGridVisibility();
-        }
+            // 2. Sort
+            const sortedLinks = [...trekLinks].sort((a, b) => {
+                const cardA = a.querySelector('.trek-card');
+                const cardB = b.querySelector('.trek-card');
 
-        function updateGridVisibility() {
-            const visibleCards = Array.from(trekCards).filter(function(card) {
-                return card.style.display !== 'none';
+                if (sortBy === 'price-low') {
+                    return parseInt(cardA.getAttribute('data-price')) - parseInt(cardB.getAttribute('data-price'));
+                } else if (sortBy === 'price-high') {
+                    return parseInt(cardB.getAttribute('data-price')) - parseInt(cardA.getAttribute('data-price'));
+                } else if (sortBy === 'duration-short') {
+                    return parseInt(cardA.getAttribute('data-duration')) - parseInt(cardB.getAttribute('data-duration'));
+                } else if (sortBy === 'duration-long') {
+                    return parseInt(cardB.getAttribute('data-duration')) - parseInt(cardA.getAttribute('data-duration'));
+                } else {
+                    // Default/Featured: use original index or some featured logic
+                    return 0;
+                }
             });
 
-            const grid = document.getElementById('treksGrid');
-            if (visibleCards.length === 0 && grid) {
-                // Show "no results" message
-                let noResults = grid.querySelector('.no-results');
+            // Re-append in sorted order
+            if (sortBy !== 'featured') {
+                sortedLinks.forEach(link => treksGrid.appendChild(link));
+            } else {
+                initialOrder.forEach(link => treksGrid.appendChild(link));
+            }
+
+            // 3. Update UI
+            if (resultsCount) {
+                resultsCount.textContent = `Showing ${visibleCount} of ${totalTreks} treks`;
+            }
+
+            // Handle "No Results"
+            let noResults = treksGrid.querySelector('.no-results');
+            if (visibleCount === 0) {
                 if (!noResults) {
                     noResults = document.createElement('div');
                     noResults.className = 'no-results';
                     noResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 3rem; color: var(--color-text-muted);">No treks match your criteria. Try adjusting your filters.</p>';
-                    grid.appendChild(noResults);
+                    treksGrid.appendChild(noResults);
                 }
-            } else {
-                const noResults = grid ? grid.querySelector('.no-results') : null;
-                if (noResults) {
-                    noResults.remove();
-                }
+            } else if (noResults) {
+                noResults.remove();
             }
         }
 
         // Event listeners
-        if (difficultyFilter) difficultyFilter.addEventListener('change', filterTreks);
-        if (durationFilter) durationFilter.addEventListener('change', filterTreks);
-        if (regionFilter) regionFilter.addEventListener('change', filterTreks);
+        [difficultyFilter, durationFilter, regionFilter, sortByFilter].forEach(el => {
+            if (el) el.addEventListener('change', updateDisplay);
+        });
+
         if (searchInput) {
-            searchInput.addEventListener('input', debounce(filterTreks, 300));
+            searchInput.addEventListener('input', debounce(updateDisplay, 300));
         }
+
+        // Initial update
+        updateDisplay();
     }
 
     // ========================================
