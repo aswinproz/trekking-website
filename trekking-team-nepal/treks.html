@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Trekking in Nepal | Best Treks & Hiking Routes | Trekking Team Nepal">
     <meta property="og:description" content="Discover 20 incredible trekking routes across Nepal. From legendary trails like Everest Base Camp and Annapurna Circuit to hidden gems like Upper Dolpo and Tsum Valley.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=1200">
+    <meta property="og:image" content="images/nepal_himalayan_mountain_peaks_above_clouds.jpg">
     <meta property="og:url" content="https://trekkingteamnepal.com/treks.html">
     <meta property="og:site_name" content="Trekking Team Nepal">
     
@@ -122,7 +122,7 @@
     <!-- Page Header -->
     <header class="page-header">
         <div class="page-header-bg">
-            <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=1920&q=80" alt="Trekking in Nepal Himalayas">
+            <img src="images/nepal_himalayan_mountain_peaks_above_clouds.jpg" alt="Trekking in Nepal Himalayas">
         </div>
         <div class="container">
             <h1>Treks in Nepal</h1>
@@ -171,9 +171,22 @@
                         <option value="eastern">Eastern Nepal</option>
                     </select>
                 </div>
+                <div class="filter-group">
+                    <label for="sortBy">Sort By</label>
+                    <select id="sortBy">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="duration-short">Duration: Shortest</option>
+                        <option value="duration-long">Duration: Longest</option>
+                    </select>
+                </div>
                 <div class="search-box">
                     <input type="text" id="trekSearch" placeholder="Search treks...">
                 </div>
+            </div>
+            <div class="results-info">
+                <span id="resultsCount">Showing 20 of 20 treks</span>
             </div>
         </div>
     </section>
@@ -188,11 +201,11 @@
             </div>
             
             <div class="grid-3" id="treksGrid">
-                <a href="treks/everest-base-camp.html" class="trek-card-link">
+                <a href="treks/everest-base-camp.html" class="trek-card-link" id="everest">
                 <!-- 1. Everest Base Camp Trek -->
-                <article class="card trek-card" data-difficulty="challenging" data-duration="21" data-region="everest">
+                <article class="card trek-card" data-difficulty="challenging" data-duration="21" data-region="everest" data-price="2499">
                     <div class="card-image">
-                        <img src="https://explorerspassage.com/wp-content/uploads/2021/12/everest-base-camp-trek-1-scaled-1.jpg" alt="Everest Base Camp Trek" loading="lazy">
+                        <img src="images/everest-base-camp-trek-stupa-himalayas-sunrise.jpg" alt="Everest Base Camp Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Challenging</span>
                     </div>
                     <div class="card-content">
@@ -211,11 +224,11 @@
                 </article>
 </a>
 
-                <a href="treks/annapurna-circuit.html" class="trek-card-link">
+                <a href="treks/annapurna-circuit.html" class="trek-card-link" id="annapurna-circuit">
                 <!-- 2. Annapurna Circuit Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="19" data-region="annapurna">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="19" data-region="annapurna" data-price="1899">
                     <div class="card-image">
-                        <img src="https://www.intrepidtravel.com/adventures/wp-content/uploads/2018/05/Hiker-800.jpg" alt="Annapurna Circuit Trek" loading="lazy">
+                        <img src="images/annapurna-circuit-trek-nepal-himalayan-landscape.jpg" alt="Annapurna Circuit Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -234,11 +247,11 @@
                 </article>
 </a>
 
-                <a href="treks/annapurna-base-camp.html" class="trek-card-link">
+                <a href="treks/annapurna-base-camp.html" class="trek-card-link" id="annapurna-base-camp">
                 <!-- 3. Annapurna Base Camp Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="14" data-region="annapurna">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="14" data-region="annapurna" data-price="1499">
                     <div class="card-image">
-                        <img src="https://www.acethehimalaya.com/wp-content/uploads/2022/08/memories-made-at-abc-during-annapurna-base-camp-trek-600x450.jpg.webp" alt="Annapurna Base Camp Trek" loading="lazy">
+                        <img src="images/annapurna-base-camp-trek-nepal-hikers.jpg" alt="Annapurna Base Camp Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -257,11 +270,11 @@
                 </article>
 </a>
 
-                <a href="treks/langtang-valley.html" class="trek-card-link">
+                <a href="treks/langtang-valley.html" class="trek-card-link" id="langtang">
                 <!-- 4. Langtang Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="12" data-region="langtang">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="12" data-region="langtang" data-price="1299">
                     <div class="card-image">
-                        <img src="https://worldexpeditions.com/croppedimages/Indian-Sub-Continent/Great-Himalaya-Trail/Langtang-Tilman-Pass-Nepal-464979-1100px.jpg" alt="Langtang Valley Trek" loading="lazy">
+                        <img src="images/langtang-valley-trek-nepal-himalayas.jpg" alt="Langtang Valley Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -280,11 +293,11 @@
                 </article>
 </a>
 
-                <a href="treks/manaslu-circuit.html" class="trek-card-link">
+                <a href="treks/manaslu-circuit.html" class="trek-card-link" id="manaslu">
                 <!-- 5. Manaslu Circuit Trek -->
-                <article class="card trek-card" data-difficulty="challenging" data-duration="18" data-region="manaslu">
+                <article class="card trek-card" data-difficulty="challenging" data-duration="18" data-region="manaslu" data-price="2199">
                     <div class="card-image">
-                        <img src="https://cdn.bookatrekking.com/data/images/2019/11/manaslu-circuit-trek-all-you-need-to-know1.jpg" alt="Manaslu Circuit Trek" loading="lazy">
+                        <img src="images/manaslu-circuit-trek-nepal-himalayas.jpg" alt="Manaslu Circuit Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Challenging</span>
                     </div>
                     <div class="card-content">
@@ -303,11 +316,11 @@
                 </article>
 </a>
 
-                <a href="treks/upper-mustang.html" class="trek-card-link">
+                <a href="treks/upper-mustang.html" class="trek-card-link" id="mustang">
                 <!-- 6. Mustang Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="15" data-region="mustang">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="15" data-region="mustang" data-price="2799">
                     <div class="card-image">
-                        <img src="https://www.goingthewholehogg.com/wp-content/uploads/Upper-Mustang-Trek-Tangge-to-Chhusang-Ridge.jpg" alt="Upper Mustang Trek" loading="lazy">
+                        <img src="images/mustang-trek-nepal-himalayan-mountains.jpg" alt="Upper Mustang Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -326,11 +339,11 @@
                 </article>
 </a>
 
-                <a href="treks/upper-dolpo.html" class="trek-card-link">
+                <a href="treks/upper-dolpo.html" class="trek-card-link" id="dolpo">
                 <!-- 7. Dolpo Trek -->
-                <article class="card trek-card" data-difficulty="challenging" data-duration="22" data-region="mustang">
+                <article class="card trek-card" data-difficulty="challenging" data-duration="22" data-region="mustang" data-price="2899">
                     <div class="card-image">
-                        <img src="https://worldexpeditions.com/croppedImages/Indian-Sub-Continent/Nepal/shutterstock_2229278829-2785764-500px.jpg" alt="Upper Dolpo Trek" loading="lazy">
+                        <img src="images/dolpo-trek-nepal-phoksundo-lake-mountain-landscape.jpg" alt="Upper Dolpo Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Challenging</span>
                     </div>
                     <div class="card-content">
@@ -351,9 +364,9 @@
 
                 <a href="treks/makalu-barun.html" class="trek-card-link">
                 <!-- 8. Makalu Barun Trek -->
-                <article class="card trek-card" data-difficulty="challenging" data-duration="21" data-region="eastern">
+                <article class="card trek-card" data-difficulty="challenging" data-duration="21" data-region="eastern" data-price="2599">
                     <div class="card-image">
-                        <img src="https://hikeontreks.com/wp-content/uploads/2018/12/MAKALU-BASE-CAMP-TREK.png" alt="Makalu Barun Trek" loading="lazy">
+                        <img src="images/makalu-barun-trek-nepal-mountains.jpg" alt="Makalu Barun Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Challenging</span>
                     </div>
                     <div class="card-content">
@@ -374,9 +387,9 @@
 
                 <a href="treks/kanchanjunga-circuit.html" class="trek-card-link">
                 <!-- 9. Kanchanjunga Circuit Trek -->
-                <article class="card trek-card" data-difficulty="extreme" data-duration="24" data-region="eastern">
+                <article class="card trek-card" data-difficulty="extreme" data-duration="24" data-region="eastern" data-price="3299">
                     <div class="card-image">
-                        <img src="https://www.adventurealternative.com/wp-content/uploads/2024/07/Kanchenjunga-Trek-Nepal.jpeg" alt="Kanchanjunga Circuit Trek" loading="lazy">
+                        <img src="images/kanchanjunga-mountain-trek-nepal-himalayas.jpg" alt="Kanchanjunga Circuit Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Extreme</span>
                     </div>
                     <div class="card-content">
@@ -397,9 +410,9 @@
 
                 <a href="treks/mardi-himal.html" class="trek-card-link">
                 <!-- 10. Mardi Himal Trek -->
-                <article class="card trek-card" data-difficulty="easy" data-duration="15" data-region="annapurna">
+                <article class="card trek-card" data-difficulty="easy" data-duration="15" data-region="annapurna" data-price="1199">
                     <div class="card-image">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/e5/3d/e1/the-mardi-himal-trek.jpg?w=1200" alt="Mardi Himal Trek" loading="lazy">
+                        <img src="images/mardi-himal-trek-nepal-machhapuchhre-peak.jpg" alt="Mardi Himal Trek" loading="lazy">
                         <span class="card-badge difficulty-easy">Easy</span>
                     </div>
                     <div class="card-content">
@@ -420,9 +433,9 @@
 
                 <a href="treks/ghorepani-poon-hill.html" class="trek-card-link">
                 <!-- 11. Ghorepani Poon Hill Trek -->
-                <article class="card trek-card" data-difficulty="easy" data-duration="10" data-region="annapurna">
+                <article class="card trek-card" data-difficulty="easy" data-duration="10" data-region="annapurna" data-price="799">
                     <div class="card-image">
-                        <img src="https://acruisingcouple.com/wp-content/uploads/2013/10/Worlds-Best-Sunrise.jpg" alt="Poon Hill Trek" loading="lazy">
+                        <img src="images/poon-hill-nepal-sunrise-annapurna-range.jpg" alt="Poon Hill Trek" loading="lazy">
                         <span class="card-badge difficulty-easy">Easy</span>
                     </div>
                     <div class="card-content">
@@ -443,9 +456,9 @@
 
                 <a href="treks/helambu.html" class="trek-card-link">
                 <!-- 12. Helambu Trek -->
-                <article class="card trek-card" data-difficulty="easy" data-duration="11" data-region="langtang">
+                <article class="card trek-card" data-difficulty="easy" data-duration="11" data-region="langtang" data-price="899">
                     <div class="card-image">
-                        <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/c285764739166d1c47292fbf7d93ff2b6aa207de/big-b283525f6183bea33219257ab55190c8.jpg" alt="Helambu Trek" loading="lazy">
+                        <img src="images/langtang-valley-nepal-trekking-himalayas-suspension-bridge.jpg" alt="Helambu Trek" loading="lazy">
                         <span class="card-badge difficulty-easy">Easy</span>
                     </div>
                     <div class="card-content">
@@ -466,9 +479,9 @@
 
 <a href="treks/tamang-heritage.html" class="trek-card-link">
 <!-- 13. Tamang Heritage Trek -->
-                <article class="card trek-card" data-difficulty="easy" data-duration="10" data-region="langtang">
+                <article class="card trek-card" data-difficulty="easy" data-duration="10" data-region="langtang" data-price="849">
                     <div class="card-image">
-                        <img src="https://www.magicalnepal.com/wp-content/uploads/2021/05/langtang-kyanjin.jpeg" alt="Tamang Heritage Trek" loading="lazy">
+                        <img src="images/langtang-valley-trek-kyanjin-gompa-nepal-himalayas.jpg" alt="Tamang Heritage Trek" loading="lazy">
                         <span class="card-badge difficulty-easy">Easy</span>
                     </div>
                     <div class="card-content">
@@ -489,9 +502,9 @@
 
                 <a href="treks/ruby-valley.html" class="trek-card-link">
                 <!-- 14. Ruby Valley Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="12" data-region="langtang">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="12" data-region="langtang" data-price="1099">
                     <div class="card-image">
-                        <img src="https://stingynomads.com/wp-content/uploads/2020/02/Langtang-trek-mountain-peaks.jpg.webp" alt="Ruby Valley Trek" loading="lazy">
+                        <img src="images/langtang-valley-trek-nepal-himalayan-mountains.jpg" alt="Ruby Valley Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -510,10 +523,11 @@
                 </article>
 </a>
 
+                <a href="treks/rolpa.html" class="trek-card-link">
                 <!-- 15. Rolpa Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="14" data-region="annapurna">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="14" data-region="annapurna" data-price="1249">
                     <div class="card-image">
-                        <img src="https://www.thenaturaladventure.com/wp-content/uploads/2020/12/annapurna-circuit-trek-2.jpg" alt="Rolpa Trek" loading="lazy">
+                        <img src="images/annapurna-circuit-trek-nepal-himalayan-peaks.jpg" alt="Rolpa Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -530,12 +544,13 @@
                         </div>
                     </div>
                 </article>
+                </a>
 
                 <a href="treks/naar-phu-valley.html" class="trek-card-link">
                 <!-- 16. Naar Phu Valley Trek -->
-                <article class="card trek-card" data-difficulty="challenging" data-duration="17" data-region="mustang">
+                <article class="card trek-card" data-difficulty="challenging" data-duration="17" data-region="mustang" data-price="2399">
                     <div class="card-image">
-                        <img src="https://lp-cms-production.imgix.net/features/2019/07/Mustang-landscape-Sml-11ac799ad12c.jpg" alt="Naar Phu Valley Trek" loading="lazy">
+                        <img src="images/mustang-nepal-trekking-canyon-landscape.jpg" alt="Naar Phu Valley Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Challenging</span>
                     </div>
                     <div class="card-content">
@@ -556,9 +571,9 @@
 
                 <a href="treks/tsum-valley.html" class="trek-card-link">
                 <!-- 17. Tsum Valley Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="19" data-region="manaslu">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="19" data-region="manaslu" data-price="2099">
                     <div class="card-image">
-                        <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/c172407b1d4064e4bbbab6111f3bf2fc3fea8739/big-775089f298c647bc275b71cdb88f220b.jpg" alt="Tsum Valley Trek" loading="lazy">
+                        <img src="images/manaslu-circuit-trek-nepal-birendra-lake.jpg" alt="Tsum Valley Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -579,9 +594,9 @@
 
                 <a href="treks/pikey-peak.html" class="trek-card-link">
                 <!-- 18. Pikey Peak Trek -->
-                <article class="card trek-card" data-difficulty="easy" data-duration="10" data-region="eastern">
+                <article class="card trek-card" data-difficulty="easy" data-duration="10" data-region="eastern" data-price="899">
                     <div class="card-image">
-                        <img src="https://unleashnepaladventure.com/wp-content/uploads/2020/02/annapurna-poon-hill-sunrise.jpg" alt="Pikey Peak Trek" loading="lazy">
+                        <img src="images/poon-hill-nepal-sunrise-machhapuchhre-view.jpg" alt="Pikey Peak Trek" loading="lazy">
                         <span class="card-badge difficulty-easy">Easy</span>
                     </div>
                     <div class="card-content">
@@ -602,9 +617,9 @@
 
                 <a href="treks/everest-three-passes.html" class="trek-card-link">
                 <!-- 19. Everest Three Passes Trek -->
-                <article class="card trek-card" data-difficulty="extreme" data-duration="21" data-region="everest">
+                <article class="card trek-card" data-difficulty="extreme" data-duration="21" data-region="everest" data-price="3499">
                     <div class="card-image">
-                        <img src="https://trekthehimalayas.com/images/EverestBaseCampTrek/GalleryDesktop/Summer/8ebcab01-64a4-4a6b-9a4c-f2b4de2650fc_EBC-2.webp" alt="Everest Three Passes Trek" loading="lazy">
+                        <img src="images/everest-base-camp-trek-nepal-ama-dablam.jpg" alt="Everest Three Passes Trek" loading="lazy">
                         <span class="card-badge difficulty-hard">Extreme</span>
                     </div>
                     <div class="card-content">
@@ -625,9 +640,9 @@
 
                 <a href="treks/lower-dolpo.html" class="trek-card-link">
                 <!-- 20. Lower Dolpo Trek -->
-                <article class="card trek-card" data-difficulty="moderate" data-duration="20" data-region="mustang">
+                <article class="card trek-card" data-difficulty="moderate" data-duration="20" data-region="mustang" data-price="2299">
                     <div class="card-image">
-                        <img src="https://www.ju-lehadventure.com/photos/860x574/860x574_nepal-upper-dolpo-trek.jpg" alt="Lower Dolpo Trek" loading="lazy">
+                        <img src="images/phoksundo-lake-dolpo-trek-nepal-landscape.jpg" alt="Lower Dolpo Trek" loading="lazy">
                         <span class="card-badge difficulty-moderate">Moderate</span>
                     </div>
                     <div class="card-content">
@@ -716,7 +731,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <div class="back-to-top" id="backToTop">↑</div>
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>

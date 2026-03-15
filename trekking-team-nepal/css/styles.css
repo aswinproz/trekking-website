@@ -913,6 +913,22 @@ a:hover {
     font-size: 1rem;
 }
 
+.results-info {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+#resultsCount {
+    background: rgba(249, 215, 95, 0.1);
+    color: var(--color-accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
 /* ========================================
    Trek Details Page
    ======================================== */
@@ -1421,7 +1437,7 @@ a:hover {
 .hero-trek .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&h=1080&fit=crop') center/cover no-repeat;
+    background: url('../images/nepal_himalayan_mountain_peaks_above_clouds.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 
