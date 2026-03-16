@@ -1437,7 +1437,7 @@ a:hover {
 .hero-trek .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('../images/nepal_himalayan_mountain_peaks_above_clouds.jpg') center/cover no-repeat;
+    background: url('../images/nepal_himalayan_mountain_peaks_above_clouds.webp') center/cover no-repeat;
     opacity: 0.3;
 }
 
